@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.70d3f74c.css",
-    "main.js": "/static/js/main.8a948936.js",
+    "main.css": "/static/css/main.468e7744.css",
+    "main.js": "/static/js/main.673d9dd6.js",
     "static/js/787.37faa4c4.chunk.js": "/static/js/787.37faa4c4.chunk.js",
     "static/media/headshot.jpg": "/static/media/headshot.47d0baecc608e6f4ec2e.jpg",
     "static/media/Mylogo.jpg": "/static/media/Mylogo.d5c60e3d949ea608bee4.jpg",
     "static/media/Umich_Seal.png": "/static/media/Umich_Seal.fbb64c306db9fd699d4b.png",
+    "static/media/teklogo.png": "/static/media/teklogo.6f98d788088b042f0f4f.png",
     "static/media/flask.png": "/static/media/flask.a4d0cb0609b40200902e.png",
     "static/media/bootstrap.png": "/static/media/bootstrap.e65c9545c3d53215ec82.png",
     "static/media/SolarisLogo.png": "/static/media/SolarisLogo.96c27a5e3674b4133838.png",
@@ -15,12 +16,12 @@
     "static/media/aws.png": "/static/media/aws.67dc9ba4b56710250310.png",
     "static/media/sql.png": "/static/media/sql.0e332bf8cd60bf9dec4c.png",
     "index.html": "/index.html",
-    "main.70d3f74c.css.map": "/static/css/main.70d3f74c.css.map",
-    "main.8a948936.js.map": "/static/js/main.8a948936.js.map",
+    "main.468e7744.css.map": "/static/css/main.468e7744.css.map",
+    "main.673d9dd6.js.map": "/static/js/main.673d9dd6.js.map",
     "787.37faa4c4.chunk.js.map": "/static/js/787.37faa4c4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.70d3f74c.css",
-    "static/js/main.8a948936.js"
+    "static/css/main.468e7744.css",
+    "static/js/main.673d9dd6.js"
   ]
 }
