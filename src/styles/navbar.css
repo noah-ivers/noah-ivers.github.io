@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,600;1,600&family=Quando&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quando', serif;
+}
+
+header {
+    font-size: 30px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 80px;
+	color: #486648;
+}
+
+nav a {
+	margin: 0 0.5em;
+	color: #486648;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #6279B8;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+	header {
+		font-size: 6vw !important;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	header {
+		font-size: 4vw;
+	}
+}
+
+
+
+
+

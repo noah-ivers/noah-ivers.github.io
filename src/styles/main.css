@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,600;1,600&family=Quando&family=Shrikhand&display=swap');
+
+
+@media screen and (max-width: 1250px) {
+    .openingText {
+        text-align: center !important;
+        padding-left: 1% !important;
+        padding-right: 1% !important;
+    }
+    .introHeader {
+        font-size: 9vw;
+    }
+    .introPara{
+        font-size: 4vw !important;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .openingPicture {
+        min-width: 250px !important;
+    }
+}
+
+.openingContainer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 16%;
+}
+.openingText {
+    width: 60%;
+    flex: auto;
+    text-align: left;
+    padding-left: 3%;
+    font-size: 48px;
+}
+.openingPicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    width: 40%;
+    flex: auto;
+}
+.headshotPhoto {
+    width: 70%;
+    height: 70%;
+    clip-path: circle(39% at 52% 50%);
+}
+
+.introHeader {
+    font-family: 'Shrikhand', cursive;
+    color: 	#486648;
+}
+
+.introPara{
+    padding-right: 0%;
+    font-size: 38px;
+    color: #7E846B;
+}

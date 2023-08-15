@@ -1,0 +1,200 @@
+.experienceTitle {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 65px;
+    color: #486648;
+}
+@media screen and (max-width: 1000px) {
+    .experienceTitle {
+        font-size: 8vw;
+    }
+}
+.workContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 800px) {
+    .workContainer{
+        flex-direction: column;
+    }
+    .freelanceBox {
+        width: 100%;
+        min-height: 0px !important;
+        padding-bottom: 5px;
+    }
+    .solarisBox {
+        width: 100%;
+        min-height: 0px !important;
+        padding-bottom: 5px;
+    }
+}
+
+.solarisBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: none;
+    border: 1px solid #486648;
+    border-radius: 10px;
+    margin: 3%;
+    flex: auto;
+    max-width: 35%;
+    outline: #486648;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: box-shadow 0.3s ease;
+    min-height: 450px;
+    min-width: 280px;
+}
+.solarisBox:hover {
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.4); /* Darker shadow on hover */
+}
+.freelanceBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #486648;
+    border-radius: 10px;
+    margin: 3%;
+    flex: auto;
+    max-width: 35%;
+    outline: #486648;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: box-shadow 0.3s ease;
+    min-height: 450px;
+    min-width: 280px;
+}
+.freelanceBox:hover {
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.4); /* Darker shadow on hover */
+}
+.Employer {
+    width: 100%;
+    padding-top: 4%;
+    color: #486648;
+    text-align: center;
+    font-size: x-large;
+    height: 100px;
+}
+.employerLogoSolaris {
+    width: 30%;
+}
+.employerLogoFreelance {
+    width: 45%;
+    clip-path: circle(39% at 52% 50%);
+}
+.position {
+    padding-top: 3%;
+    color: #486648;
+    text-align: center;
+    font-size: large;
+}
+
+.work {
+    padding: 2%;
+    text-align: center;
+    color: #7E846B;
+    font-size: small;
+}
+
+h3 {
+    padding-top: 3%;
+    color: #486648;
+    text-align: center;
+}
+
+.projectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #486648;
+    border-radius: 10px;
+    margin: 3%;
+    outline: #486648;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: box-shadow 0.3s ease;
+    min-width: 220px;
+    max-width: 550px;
+    height: 260px;
+}
+@media screen and (max-width: 600px) {
+    .projects {
+        height: auto;
+    }
+}
+.projects:hover {
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.4); /* Darker shadow on hover */
+}
+.projectList {
+    list-style-position: none;
+    list-style-type: none;
+    color: #7E846B;
+    max-width: 500px;
+    align-items: center;
+    padding: 2%;
+}
+.listText {
+    text-align: center;
+}
+.leaderContainer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.tekText {
+    flex: auto;
+    width: 55%;
+    padding: 4%;
+}
+.tekPhoto {
+    flex: auto;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 450px;
+}
+.teklogo {
+    width: 350px;
+    clip-path: circle(35% at 50% 50%);
+    transition: width 0.3s, clip-path 0.3s;
+}
+.teklogo:hover {
+    transform: scale(1.05); /* Add scaling effect on hover */
+}
+@media screen and (max-width: 450px) {
+    .teklogo { 
+        width: 75% !important;
+        min-width: 250px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .tekPhoto {
+        min-width: 200px !important;
+    }
+}
+.tekPara {
+    color: #7E846B;
+    font-size: medium;
+    text-align: center;
+    padding: 2%;
+}
+.tekLink {
+    flex: auto;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.whereText {
+    text-decoration: underline;
+}

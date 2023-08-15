@@ -1,0 +1,105 @@
+.goblue {
+    color: #00274C;
+    text-align: center;
+}
+.title {
+    text-align: center;
+    font-size: 65px;
+    color: #486648;
+}
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 8vw;
+    }
+}
+.expo {
+    font-size: 20px;
+    text-align: center;
+    color: #7E846B;
+}
+.logos {
+    max-width: 75px;
+    min-width: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.sections {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.stackContainer {
+    flex: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    min-width: 350px;
+}
+.stack {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.stackText {
+    text-align: center;
+    color: #486648;
+}
+.stackExpo {
+    flex: auto;
+    width: 50%;
+    padding: 5%;
+    color: #7E846B;
+}
+.stackh2 {
+    font-size: x-large;
+    color: #486648;
+    text-align: center;
+}
+.stackListContainer {
+    list-style-position: inside;
+}
+.stacklist {
+    padding: 8px;
+}
+.edutitle{
+    font-size: xx-large;
+    color: #00274C;
+    text-align: center;
+    padding-left: 0%;
+}
+.eduContainer {
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.eduPic{
+    display: flex;
+    flex: auto;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+}
+.eduText {
+    flex: auto;
+    padding-left: 4%;
+    width: 70%;
+}
+.umichPic {
+    width: 200px;
+}
+.umichh4 {
+    color: #00274C;
+    font-size: x-large;
+}
+.umichBullet {
+    color: #00274C;
+    padding: 1%;
+    overflow-wrap: normal;
+}
+.umichList {
+    list-style-position: inside;
+}
