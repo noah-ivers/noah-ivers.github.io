@@ -16,7 +16,7 @@ function JourneyMap() {
 
     const map = new maplibregl.Map({
       container: mapContainerRef.current,
-      style: 'https://tiles.openfreemap.org/styles/liberty',
+      style: 'https://demotiles.maplibre.org/style.json',
       center: [-77, 42.45],
       zoom: 5.4,
       pitch: 0,
@@ -82,17 +82,6 @@ function JourneyMap() {
       el.addEventListener('mouseleave', () => {
         popup.remove();
       });
-
-      el.addEventListener('click', () => {
-        popup.setLngLat(place.coords).addTo(map);
-        map.flyTo({
-          center: place.coords,
-          zoom: 14.5,
-          pitch: 60,
-          bearing: 24,
-          essential: true,
-        });
-      });
     });
 
     boundsRef.current = bounds;
@@ -104,6 +93,27 @@ function JourneyMap() {
         duration: 0,
       });
     }
+
+    map.on('load', () => {
+      const boundaryLayers = [
+        'admin-0-boundary',
+        'admin-0-boundary-disputed',
+        'admin-1-boundary',
+        'admin-1-boundary-bg',
+      ];
+
+      boundaryLayers.forEach((layerId) => {
+        if (!map.getLayer(layerId)) return;
+        try {
+          // Ensure boundaries are visible and high-contrast
+          map.setLayoutProperty(layerId, 'visibility', 'visible');
+          map.setPaintProperty(layerId, 'line-color', '#38bdf8');
+          map.setPaintProperty(layerId, 'line-width', 2.2);
+        } catch (e) {
+          // Some layers may not support these paint properties; ignore safely
+        }
+      });
+    });
 
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 
@@ -140,9 +150,6 @@ function JourneyMap() {
       <h2 className="journeyTitle">My Journey So Far</h2>
       <p className="journeySubtitle">
         A quick map of where I&apos;ve studied and worked so far.
-      </p>
-      <p className="journeySubtitle">
-        (click logos to see cities!)
       </p>
       <div className="journeyMapWrapper">
         <button
