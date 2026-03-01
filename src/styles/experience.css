@@ -1,200 +1,255 @@
 .experienceTitle {
-    padding-top: 3%;
-    text-align: center;
-    font-size: 65px;
-    color: #486648;
-}
-@media screen and (max-width: 1000px) {
-    .experienceTitle {
-        font-size: 8vw;
-    }
-}
-.workContainer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-@media screen and (max-width: 800px) {
-    .workContainer{
-        flex-direction: column;
-    }
-    .freelanceBox {
-        width: 100%;
-        min-height: 0px !important;
-        padding-bottom: 5px;
-    }
-    .solarisBox {
-        width: 100%;
-        min-height: 0px !important;
-        padding-bottom: 5px;
-    }
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  text-align: center;
+  padding-top: var(--space-section);
+  margin-bottom: var(--space-block);
 }
 
-.solarisBox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    outline: none;
-    border: 1px solid #486648;
-    border-radius: 10px;
-    margin: 3%;
-    flex: auto;
-    max-width: 35%;
-    outline: #486648;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    transition: box-shadow 0.3s ease;
-    min-height: 450px;
-    min-width: 280px;
+.experienceTitle + .whereText {
+  margin-top: 0;
 }
-.solarisBox:hover {
-    box-shadow: 0 6px 15px rgb(0 0 0 / 0.4); /* Darker shadow on hover */
+
+.whereText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin: var(--space-block) 0 1.25rem;
+  padding: 0 var(--space-block);
 }
-.freelanceBox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #486648;
-    border-radius: 10px;
-    margin: 3%;
-    flex: auto;
-    max-width: 35%;
-    outline: #486648;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    transition: box-shadow 0.3s ease;
-    min-height: 450px;
-    min-width: 280px;
+
+.workContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--space-block);
+  padding: 0 var(--space-block);
+  max-width: 1100px;
+  margin: 0 auto var(--space-section);
 }
-.freelanceBox:hover {
-    box-shadow: 0 6px 15px rgb(0 0 0 / 0.4); /* Darker shadow on hover */
+
+.solarisBox,
+.freelanceBox,
+.fordBox {
+  flex: 1 1 320px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-block);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  min-height: 380px;
 }
+
+.solarisBox:hover,
+.freelanceBox:hover,
+.fordBox:hover {
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-2px);
+}
+
 .Employer {
-    width: 100%;
-    padding-top: 4%;
-    color: #486648;
-    text-align: center;
-    font-size: x-large;
-    height: 100px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 0.75rem;
 }
+
 .employerLogoSolaris {
-    width: 30%;
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
 }
+
 .employerLogoFreelance {
-    width: 45%;
-    clip-path: circle(39% at 52% 50%);
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
+
+.employerLogoFord {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
 .position {
-    padding-top: 3%;
-    color: #486648;
-    text-align: center;
-    font-size: large;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.75rem;
 }
 
 .work {
-    padding: 2%;
-    text-align: center;
-    color: #7E846B;
-    font-size: small;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.5;
+  flex: 1;
 }
 
-h3 {
-    padding-top: 3%;
-    color: #486648;
-    text-align: center;
+.workList {
+  list-style: none;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.workItem {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  text-align: center;
+  padding: 0.4rem 0;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.workItem::before {
+  content: \"·\";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .projectsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-block);
+  padding: 0 var(--space-block);
+  max-width: 1200px;
+  margin: 0 auto var(--space-section);
 }
 
 .projects {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #486648;
-    border-radius: 10px;
-    margin: 3%;
-    outline: #486648;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    transition: box-shadow 0.3s ease;
-    min-width: 220px;
-    max-width: 550px;
-    height: 260px;
+  flex: 1 1 280px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-block);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  min-height: 220px;
 }
-@media screen and (max-width: 600px) {
-    .projects {
-        height: auto;
-    }
-}
+
 .projects:hover {
-    box-shadow: 0 6px 15px rgb(0 0 0 / 0.4); /* Darker shadow on hover */
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-2px);
 }
+
+.projects .position {
+  margin-bottom: 0.5rem;
+}
+
 .projectList {
-    list-style-position: none;
-    list-style-type: none;
-    color: #7E846B;
-    max-width: 500px;
-    align-items: center;
-    padding: 2%;
+  list-style: none;
+  width: 100%;
 }
+
 .listText {
-    text-align: center;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  text-align: center;
 }
+
 .leaderContainer {
-    display: flex;
-    flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: var(--space-block);
+  max-width: 1000px;
+  margin: 0 auto var(--space-section);
+  padding: var(--space-block);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  transition: box-shadow 0.3s ease;
 }
+
+.leaderContainer:hover {
+  box-shadow: var(--glass-shadow-hover);
+}
+
 .tekText {
-    flex: auto;
-    width: 55%;
-    padding: 4%;
+  flex: 1 1 320px;
+  padding: 0.5rem 0;
 }
-.tekPhoto {
-    flex: auto;
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 450px;
-}
-.teklogo {
-    width: 350px;
-    clip-path: circle(35% at 50% 50%);
-    transition: width 0.3s, clip-path 0.3s;
-}
-.teklogo:hover {
-    transform: scale(1.05); /* Add scaling effect on hover */
-}
-@media screen and (max-width: 450px) {
-    .teklogo { 
-        width: 75% !important;
-        min-width: 250px !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-    .tekPhoto {
-        min-width: 200px !important;
-    }
-}
+
 .tekPara {
-    color: #7E846B;
-    font-size: medium;
-    text-align: center;
-    padding: 2%;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: left;
 }
+
+.tekPhoto {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .tekLink {
-    flex: auto;
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.whereText {
-    text-decoration: underline;
+
+.tekLink:hover {
+  transform: scale(1.03);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+.teklogo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+@media screen and (max-width: 640px) {
+  .leaderContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .tekPara {
+    text-align: center;
+  }
+  .teklogo {
+    width: 120px;
+    height: 120px;
+  }
 }

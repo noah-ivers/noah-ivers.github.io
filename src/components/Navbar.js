@@ -1,20 +1,32 @@
+// src/components/Navbar.js
 import React from 'react';
-import { Link } from "react-router-dom";
-import "../styles/navbar.css"
+import "../styles/navbar.css";
 
 function Navbar() {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-	return (
-		<header>
-			<nav>
-				<div className='navlinks'>
-					<Link to="/"> About </Link>
-					<Link to="/about"> Experience </Link>
-					<Link to="/contact"> Contact </Link>
-				</div>
-			</nav>
-		</header>
-	);
+  return (
+    <header>
+      <nav>
+        <div className='navlinks'>
+          <button onClick={() => scrollToSection("about")} className="navbutton">
+            About
+          </button>
+          <button onClick={() => scrollToSection("experience")} className="navbutton">
+            Experience
+          </button>
+          <button onClick={() => scrollToSection("contact")} className="navbutton">
+            Contact
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
-export default Navbar
+export default Navbar;

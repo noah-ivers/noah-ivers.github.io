@@ -1,53 +1,68 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,600;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,600;1,600&family=Quando&display=swap');
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Quando', serif;
-}
-
 header {
-    font-size: 30px;
-	position: relative;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	height: 80px;
-	color: #486648;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  padding: 0 var(--space-block);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
-nav a {
-	margin: 0 0.5em;
-	color: #486648;
-	text-decoration: none;
+.navbutton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0.5em;
+  font: inherit;
+  color: var(--text-primary);
+  cursor: pointer;
+  opacity: 0.9;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-nav a:hover {
-	color: #6279B8;
+.navbutton:hover {
+  color: var(--accent);
+  opacity: 1;
 }
 
-header div,
 nav {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navlinks a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.9;
+}
+
+.navlinks a:hover {
+  color: var(--accent);
+  opacity: 1;
 }
 
 @media screen and (max-width: 550px) {
-	header {
-		font-size: 6vw !important;
-	}
+  .navlinks {
+    gap: 1.25rem;
+  }
+  header {
+    font-size: 13px;
+  }
 }
-
-@media screen and (max-width: 950px) {
-	header {
-		font-size: 4vw;
-	}
-}
-
-
-
-
-

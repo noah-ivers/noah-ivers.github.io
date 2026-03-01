@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/main.css"
-import headshot from "../assets/headshot.jpg";
+import headshot from "../assets/headshot.jpeg";
 
 function Main() {
 
