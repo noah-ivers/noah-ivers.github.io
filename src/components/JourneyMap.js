@@ -6,16 +6,10 @@ import fordLogo from '../assets/Ford.jpg';
 import solarisLogo from '../assets/SolarisLogo.png';
 import umichLogo from '../assets/Umich_Seal.png';
 
-const INITIAL_VIEW = {
-  center: [-77, 42.45],
-  zoom: 5.4,
-  pitch: 0,
-  bearing: 0,
-};
-
 function JourneyMap() {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
+  const boundsRef = useRef(null);
 
   useEffect(() => {
     if (!mapContainerRef.current) return;
@@ -23,10 +17,10 @@ function JourneyMap() {
     const map = new maplibregl.Map({
       container: mapContainerRef.current,
       style: 'https://tiles.openfreemap.org/styles/liberty',
-      center: INITIAL_VIEW.center,
-      zoom: INITIAL_VIEW.zoom,
-      pitch: INITIAL_VIEW.pitch,
-      bearing: INITIAL_VIEW.bearing,
+      center: [-77, 42.45],
+      zoom: 5.4,
+      pitch: 0,
+      bearing: 0,
     });
 
     mapRef.current = map;
@@ -55,7 +49,11 @@ function JourneyMap() {
       },
     ];
 
+    const bounds = new maplibregl.LngLatBounds();
+
     locations.forEach((place) => {
+      bounds.extend(place.coords);
+
       const el = document.createElement('div');
       el.className = 'journey-marker';
 
@@ -97,6 +95,16 @@ function JourneyMap() {
       });
     });
 
+    boundsRef.current = bounds;
+
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
+    if (isSmallScreen) {
+      map.fitBounds(bounds, {
+        padding: 40,
+        duration: 0,
+      });
+    }
+
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 
     return () => {
@@ -107,13 +115,24 @@ function JourneyMap() {
 
   const handleReset = () => {
     if (!mapRef.current) return;
-    mapRef.current.flyTo({
-      center: INITIAL_VIEW.center,
-      zoom: INITIAL_VIEW.zoom,
-      pitch: INITIAL_VIEW.pitch,
-      bearing: INITIAL_VIEW.bearing,
-      essential: true,
-    });
+    const map = mapRef.current;
+    const bounds = boundsRef.current;
+    const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
+
+    if (isSmallScreen && bounds) {
+      map.fitBounds(bounds, {
+        padding: 40,
+        essential: true,
+      });
+    } else {
+      map.flyTo({
+        center: [-77, 42.45],
+        zoom: 5.4,
+        pitch: 0,
+        bearing: 0,
+        essential: true,
+      });
+    }
   };
 
   return (
