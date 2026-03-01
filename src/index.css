@@ -1,16 +1,16 @@
-/* Apple-inspired glass theme - design tokens */
+/* Midnight neon dark theme - design tokens */
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.5);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --blur: 20px;
+  --glass-bg: rgba(15, 23, 42, 0.9);
+  --glass-border: rgba(148, 163, 184, 0.45);
+  --glass-shadow: 0 18px 60px rgba(15, 23, 42, 0.95);
+  --glass-shadow-hover: 0 24px 80px rgba(15, 23, 42, 0.95);
+  --blur: 24px;
   --blur-strong: 40px;
-  --text-primary: #1d1d1f;
-  --text-secondary: #6e6e73;
-  --text-tertiary: #86868b;
-  --accent: #0071e3;
-  --accent-hover: #0077ed;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
   --radius-sm: 12px;
   --radius-md: 18px;
   --radius-lg: 24px;
@@ -37,9 +37,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
-  background: linear-gradient(165deg, #f5f5f7 0%, #e8e8ed 35%, #f0f0f5 70%, #fafafa 100%);
+  background:
+    radial-gradient(circle at top left, #1d293b 0%, #020617 45%, #000000 100%);
   min-height: 100vh;
-  line-height: 1.47059;
+  line-height: 1.5;
   font-weight: 400;
   letter-spacing: -0.022em;
 }
