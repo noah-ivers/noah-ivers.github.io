@@ -1,0 +1,69 @@
+/* src/styles/contact.css */
+.contactSection {
+  padding: var(--space-section) var(--space-block);
+  max-width: 800px;
+  margin: 0 auto var(--space-section);
+}
+
+.contactCard {
+  padding: var(--space-block);
+  text-align: center;
+}
+
+.contactTitle {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.contactSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contactLink {
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contactLink:hover {
+  background: rgba(56, 189, 248, 0.22);
+  transform: translateY(-1px);
+}
+
+.contactEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.contactEmailLabel {
+  color: var(--text-tertiary);
+}
+
+.contactEmailValue {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contactEmailValue:hover {
+  text-decoration: underline;
+}

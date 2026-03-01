@@ -1,62 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,600;1,600&family=Quando&family=Shrikhand&display=swap');
-
-
-@media screen and (max-width: 1250px) {
-    .openingText {
-        text-align: center !important;
-        padding-left: 1% !important;
-        padding-right: 1% !important;
-    }
-    .introHeader {
-        font-size: 9vw;
-    }
-    .introPara{
-        font-size: 4vw !important;
-    }
+.journeySection {
+  padding: 0 var(--space-block) var(--space-section);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.journeyTitle {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
 
-@media screen and (max-width: 600px) {
-    .openingPicture {
-        min-width: 250px !important;
-    }
+.journeySubtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--space-block);
+}
+
+.journeyMapWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.journeyMap {
+  height: 360px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.journeyResetButton {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(15, 23, 42, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.7);
+}
+
+.journeyResetButton:hover {
+  background: rgba(15, 23, 42, 1);
+}
+
+.journey-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.75);
+  border: 2px solid rgba(15, 23, 42, 0.9);
+  background: #0b1120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.journey-popup .maplibregl-popup-content {
+  color: #000;
+}
+
+.journey-marker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .openingContainer {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    padding-top: 10%;
-    padding-bottom: 16%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-block);
+  min-height: calc(100vh - 52px);
+  padding: var(--space-section) var(--space-block);
+  margin-top: 52px;
 }
+
 .openingText {
-    width: 60%;
-    flex: auto;
-    text-align: left;
-    padding-left: 3%;
-    font-size: 48px;
-}
-.openingPicture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 500px;
-    width: 40%;
-    flex: auto;
-}
-.headshotPhoto {
-    width: 70%;
-    height: 70%;
-    clip-path: circle(39% at 52% 50%);
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 560px;
+  text-align: left;
 }
 
 .introHeader {
-    font-family: 'Shrikhand', cursive;
-    color: 	#486648;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 0.5em;
 }
 
-.introPara{
-    padding-right: 0%;
-    font-size: 38px;
-    color: #7E846B;
+.introPara {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 28em;
+}
+
+.openingPicture {
+  flex: 0 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  max-width: 420px;
+}
+
+.headshotPhoto {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .openingContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .openingText {
+    text-align: center;
+  }
+  .introPara {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

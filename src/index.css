@@ -1,14 +1,60 @@
-body {
+/* Midnight neon dark theme - design tokens */
+:root {
+  --glass-bg: rgba(15, 23, 42, 0.9);
+  --glass-border: rgba(148, 163, 184, 0.45);
+  --glass-shadow: 0 18px 60px rgba(15, 23, 42, 0.95);
+  --glass-shadow-hover: 0 24px 80px rgba(15, 23, 42, 0.95);
+  --blur: 24px;
+  --blur-strong: 40px;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+  --space-section: clamp(4rem, 10vw, 7rem);
+  --space-block: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FAF0E6;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top left, #1d293b 0%, #020617 45%, #000000 100%);
+  min-height: 100vh;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.022em;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", monospace;
+}
+
+/* Glass panel base */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
 }

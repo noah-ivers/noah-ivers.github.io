@@ -6,7 +6,7 @@ import umich from '../assets/Umich_Seal.png';
 function Skills() {
 
 	return (
-		<div>
+		<div id="about" >
             <div>
                 <h2 className='title'> About Me </h2>
             </div>
@@ -17,18 +17,16 @@ function Skills() {
                     </h3>
                         <ul className='stackListContainer'>
                             <li className='stacklist'>
-                                Contructing the back end of web applications using Python and its Flask library for client side projects and 
-                                    Django library for server side projects
-                                
+                                Building full-stack web apps with TypeScript/JavaScript (Angular, React) and Java (Spring Boot), plus Python (Flask, Django)
                             </li>
                             <li className='stacklist'>
-                                 Writing concise and efficient SQL queries to link back end functionality and well designed databases
-                                
+                                Designing and shipping cloud features on Google Cloud Platform, including Firestore-backed APIs and secure deployments
                             </li>
                             <li className='stacklist'>
-                                 Creating responsive and accessible user interfaces using React, Javascript, HTML/CSS, Jquery, and 
-                                    Bootstrap that interact with back end technologies while maintaining a polished design
-                                
+                                Quality + security focused development with Git, Jasmine unit tests, SonarQube, and 42Crunch
+                            </li>
+                            <li className='stacklist'>
+                                Data visualization and mapping interfaces using MapLibre and Three.js, plus SQL for data access
                             </li>
                         </ul>
                 </div>
@@ -47,9 +45,6 @@ function Skills() {
                 <h3 className='edutitle'>
                     Education
                 </h3>
-                <h5 className='goblue'>
-                    (This Section Can't Be Green, Go Blue)
-                </h5>
                 <div className='eduContainer'>
                     <div className='eduPic'>
                         <img className='umichPic' src={umich} alt='University of Michigan Seal'/>
