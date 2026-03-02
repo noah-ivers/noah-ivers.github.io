@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6582225.css",
-    "main.js": "/static/js/main.40d96eda.js",
-    "static/js/496.2290ec0d.chunk.js": "/static/js/496.2290ec0d.chunk.js",
+    "main.css": "/static/css/main.79617eab.css",
+    "main.js": "/static/js/main.aec6a918.js",
+    "static/js/496.8e4b9459.chunk.js": "/static/js/496.8e4b9459.chunk.js",
     "static/media/Mylogo.jpg": "/static/media/Mylogo.d5c60e3d949ea608bee4.jpg",
     "static/media/Umich_Seal.png": "/static/media/Umich_Seal.fbb64c306db9fd699d4b.png",
     "static/media/teklogo.png": "/static/media/teklogo.6f98d788088b042f0f4f.png",
@@ -19,12 +19,12 @@
     "static/media/c++.png": "/static/media/c++.c714aed4936fa0f9a9ee.png",
     "static/media/sql.png": "/static/media/sql.0e332bf8cd60bf9dec4c.png",
     "index.html": "/index.html",
-    "main.a6582225.css.map": "/static/css/main.a6582225.css.map",
-    "main.40d96eda.js.map": "/static/js/main.40d96eda.js.map",
-    "496.2290ec0d.chunk.js.map": "/static/js/496.2290ec0d.chunk.js.map"
+    "main.79617eab.css.map": "/static/css/main.79617eab.css.map",
+    "main.aec6a918.js.map": "/static/js/main.aec6a918.js.map",
+    "496.8e4b9459.chunk.js.map": "/static/js/496.8e4b9459.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6582225.css",
-    "static/js/main.40d96eda.js"
+    "static/css/main.79617eab.css",
+    "static/js/main.aec6a918.js"
   ]
 }
