@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.79617eab.css",
-    "main.js": "/static/js/main.aec6a918.js",
+    "main.js": "/static/js/main.7fc3686b.js",
     "static/js/496.8e4b9459.chunk.js": "/static/js/496.8e4b9459.chunk.js",
     "static/media/Mylogo.jpg": "/static/media/Mylogo.d5c60e3d949ea608bee4.jpg",
     "static/media/Umich_Seal.png": "/static/media/Umich_Seal.fbb64c306db9fd699d4b.png",
@@ -20,11 +20,11 @@
     "static/media/sql.png": "/static/media/sql.0e332bf8cd60bf9dec4c.png",
     "index.html": "/index.html",
     "main.79617eab.css.map": "/static/css/main.79617eab.css.map",
-    "main.aec6a918.js.map": "/static/js/main.aec6a918.js.map",
+    "main.7fc3686b.js.map": "/static/js/main.7fc3686b.js.map",
     "496.8e4b9459.chunk.js.map": "/static/js/496.8e4b9459.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79617eab.css",
-    "static/js/main.aec6a918.js"
+    "static/js/main.7fc3686b.js"
   ]
 }
