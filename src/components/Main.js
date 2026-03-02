@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/main.css';
 import headshot from '../assets/headshot.jpeg';
-import JourneyMap from './JourneyMap';
+//import JourneyMap from './JourneyMap';
 
 function Main() {
   return (
@@ -18,7 +18,7 @@ function Main() {
           <img className="headshotPhoto" src={headshot} alt="Noah Ivers Headshot" />
         </div>
       </div>
-      <JourneyMap />
+      {/* <JourneyMap /> */}
     </div>
   );
 }
