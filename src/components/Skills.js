@@ -5,8 +5,8 @@ import umich from '../assets/Umich_Seal.png';
 
 function Skills() {
 
-	return (
-		<div id="about" >
+    return (
+        <div id="about" >
             <div>
                 <h2 className='title'> About Me </h2>
             </div>
@@ -33,7 +33,7 @@ function Skills() {
                 <div className='stackContainer'>
                         {mytechstack.languages.map((languages, i) => {
                         return (
-                            <div className='stack'>
+                            <div className='stack' key={languages.language}>
                                 <img className='logos' src={languages.picture} alt='Programming Language Icon'/>
                                 <p className='stackText'>{languages.language}</p>
                             </div>
@@ -66,8 +66,8 @@ function Skills() {
                     </div>
                 </div>
             </div>
-		</div>
-	);
+        </div>
+    );
 }
 
 export default Skills
