@@ -71,25 +71,6 @@ function Experience() {
                             </li>
                         </ul>
                     </div>
-                    <div className='projects'>
-                        <h4 className='position'> Search Engine </h4>
-                        <ul className='projectList'>
-                            <li className='listText'>
-                                Successfully implemented segmented inverted index creation for web pages using MapReduce, showcasing expertise in text and link analysis. Developed a scalable Index server with REST API in Flask, 
-                                offering Google-like search UI for dynamic pages with JSON search result outputs.
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='projects'>
-                        <h4 className='position'> Mapreduce Framework </h4>
-                        <ul className='projectList'>
-                            <li className='listText'>
-                            Built a fault tolerant mapreduce framework using distributed systems, 
-                            OS-provided concurrency facilities (threads and processes), and networking (sockets).
-                            Implemented  “worker” and “manager” classes that would communicate with each other using TCP and UDP sockets.
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <h3 className='whereText'> Where I've Lead </h3>
                 <div className='leaderContainer'>
